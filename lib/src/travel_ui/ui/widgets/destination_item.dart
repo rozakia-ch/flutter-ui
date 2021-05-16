@@ -70,7 +70,7 @@ class DestinationItem extends StatelessWidget {
                       child: Image(
                         height: 180,
                         width: 180,
-                        image: AssetImage(destination.imageUrl),
+                        image: NetworkImage(destination.imageUrl),
                         fit: BoxFit.cover,
                       ),
                     ),

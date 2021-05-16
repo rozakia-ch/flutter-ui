@@ -65,7 +65,7 @@ class HotelItem extends StatelessWidget {
               child: Image(
                 height: 180,
                 width: 220,
-                image: AssetImage(hotel.imageUrl),
+                image: NetworkImage(hotel.imageUrl),
                 fit: BoxFit.cover,
               ),
             ),

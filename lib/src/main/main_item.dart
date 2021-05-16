@@ -21,20 +21,21 @@ class MainItem extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20.0),
                 image: DecorationImage(
-                  image: AssetImage("assets/images/gondola.jpg"),
+                  image: NetworkImage(ui.image),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             Container(
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    stops: [0.1, 0.7],
-                    colors: [Colors.black.withOpacity(0.7), Colors.black.withOpacity(0.0)],
-                  ),
-                  borderRadius: BorderRadius.circular(20.0)),
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  stops: [0.1, 0.5],
+                  colors: [Colors.black.withOpacity(0.7), Colors.black.withOpacity(0.0)],
+                ),
+                borderRadius: BorderRadius.circular(20.0),
+              ),
             ),
             Positioned(
               bottom: 10.0,

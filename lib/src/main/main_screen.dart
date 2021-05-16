@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:travel_ui/src/constants/api_constants.dart';
 import 'package:travel_ui/src/main/main_item.dart';
 import 'package:travel_ui/src/main/main_model.dart';
 import 'package:travel_ui/src/travel_ui/ui/screens/travel_screen.dart';
@@ -10,8 +11,16 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Ui> _listUI = [
-      Ui(name: "Travel UI", route: TravelScreen()),
-      Ui(name: "Travel UI", route: TravelScreen())
+      Ui(
+        name: "Travel UI",
+        route: TravelScreen(),
+        image: "${ApiConstants.BASE_URL_IMAGE}/travel_app.png",
+      ),
+      Ui(
+        name: "Travel UI",
+        route: TravelScreen(),
+        image: "${ApiConstants.BASE_URL_IMAGE}/travel_app.png",
+      )
     ];
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(

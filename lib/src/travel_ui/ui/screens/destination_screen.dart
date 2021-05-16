@@ -44,7 +44,7 @@ class DestinationScreen extends StatelessWidget {
                         bottomLeft: Radius.circular(30.0),
                         bottomRight: Radius.circular(30.0),
                       ),
-                      child: Image.asset(
+                      child: Image.network(
                         destination.imageUrl,
                         fit: BoxFit.cover,
                       ),

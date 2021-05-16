@@ -1,3 +1,4 @@
+import 'package:travel_ui/src/constants/api_constants.dart';
 import 'package:travel_ui/src/travel_ui/models/activity.dart';
 import 'package:travel_ui/src/travel_ui/models/destination.dart';
 import 'package:travel_ui/src/travel_ui/models/hotel.dart';
@@ -5,7 +6,7 @@ import 'package:travel_ui/src/travel_ui/models/hotel.dart';
 class Data {
   static List<Activity> activities = [
     Activity(
-      imageUrl: 'assets/images/stmarksbasilica.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/stmarksbasilica.jpg',
       name: 'St. Mark\'s Basilica',
       type: 'Sightseeing Tour',
       startTimes: ['9:00 am', '11:00 am'],
@@ -13,7 +14,7 @@ class Data {
       price: 30,
     ),
     Activity(
-      imageUrl: 'assets/images/gondola.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/gondola.jpg',
       name: 'Walking Tour and Gonadola Ride',
       type: 'Sightseeing Tour',
       startTimes: ['11:00 pm', '1:00 pm'],
@@ -21,7 +22,7 @@ class Data {
       price: 210,
     ),
     Activity(
-      imageUrl: 'assets/images/murano.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/murano.jpg',
       name: 'Murano and Burano Tour',
       type: 'Sightseeing Tour',
       startTimes: ['12:30 pm', '2:00 pm'],
@@ -32,35 +33,35 @@ class Data {
 
   static List<Destination> destinations = [
     Destination(
-      imageUrl: 'assets/images/venice.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/venice.jpg',
       city: 'Venice',
       country: 'Italy',
       description: 'Visit Venice for an amazing and unforgettable adventure.',
       activities: activities,
     ),
     Destination(
-      imageUrl: 'assets/images/paris.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/paris.jpg',
       city: 'Paris',
       country: 'France',
       description: 'Visit Paris for an amazing and unforgettable adventure.',
       activities: activities,
     ),
     Destination(
-      imageUrl: 'assets/images/newdelhi.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/newdelhi.jpg',
       city: 'New Delhi',
       country: 'India',
       description: 'Visit New Delhi for an amazing and unforgettable adventure.',
       activities: activities,
     ),
     Destination(
-      imageUrl: 'assets/images/saopaulo.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/saopaulo.jpg',
       city: 'Sao Paulo',
       country: 'Brazil',
       description: 'Visit Sao Paulo for an amazing and unforgettable adventure.',
       activities: activities,
     ),
     Destination(
-      imageUrl: 'assets/images/newyork.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/newyork.jpg',
       city: 'New York City',
       country: 'United States',
       description: 'Visit New York for an amazing and unforgettable adventure.',
@@ -69,19 +70,19 @@ class Data {
   ];
   static List<Hotel> hotels = [
     Hotel(
-      imageUrl: 'assets/images/hotel0.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/hotel0.jpg',
       name: 'Hotel 0',
       address: '404 Great St',
       price: 175,
     ),
     Hotel(
-      imageUrl: 'assets/images/hotel1.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/hotel1.jpg',
       name: 'Hotel 1',
       address: '404 Great St',
       price: 300,
     ),
     Hotel(
-      imageUrl: 'assets/images/hotel2.jpg',
+      imageUrl: '${ApiConstants.BASE_URL_IMAGE}/travel_ui/hotel2.jpg',
       name: 'Hotel 2',
       address: '404 Great St',
       price: 240,
