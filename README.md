@@ -16,5 +16,6 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 # flutter-ui
 [Download APK](https://github.com/rozakia-ch/flutter-ui/raw/main/apk/app-release.apk)
+
 Design:
-- [Travel UI] (https://dribbble.com/shots/6510521-Travel-App-for-booking-unique-experience)
+- [Travel UI](https://dribbble.com/shots/6510521-Travel-App-for-booking-unique-experience)
