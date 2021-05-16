@@ -1,9 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.travel_ui">
-
+    package="com.flutter.ui.flutter_ui">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="travel_ui"
+        android:label="flutter_ui"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

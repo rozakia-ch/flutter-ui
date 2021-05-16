@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:travel_ui/src/constants/api_constants.dart';
-import 'package:travel_ui/src/main/main_item.dart';
-import 'package:travel_ui/src/main/main_model.dart';
-import 'package:travel_ui/src/travel_ui/ui/screens/travel_screen.dart';
+import 'package:flutter_ui/src/constants/api_constants.dart';
+import 'package:flutter_ui/src/main/main_item.dart';
+import 'package:flutter_ui/src/main/main_model.dart';
+import 'package:flutter_ui/src/money_banking/ui/screens/money_banking_screen.dart';
+import 'package:flutter_ui/src/travel_ui/ui/screens/travel_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key key}) : super(key: key);
@@ -17,9 +18,9 @@ class MainScreen extends StatelessWidget {
         image: "${ApiConstants.BASE_URL_IMAGE}/travel_app.png",
       ),
       Ui(
-        name: "Travel UI",
-        route: TravelScreen(),
-        image: "${ApiConstants.BASE_URL_IMAGE}/travel_app.png",
+        name: "Moora Money Banking Management App UI",
+        route: MoneyBankingScreen(),
+        image: "${ApiConstants.BASE_URL_IMAGE}/money_banking_app.png",
       )
     ];
     return AnnotatedRegion<SystemUiOverlayStyle>(

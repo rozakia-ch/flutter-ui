@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:travel_ui/src/travel_ui/models/activity.dart';
-import 'package:travel_ui/src/travel_ui/models/destination.dart';
-import 'package:travel_ui/src/travel_ui/ui/widgets/activity_item.dart';
-import 'package:travel_ui/src/travel_ui/ui/widgets/rating_indicator.dart';
+import 'package:flutter_ui/src/travel_ui/models/activity.dart';
+import 'package:flutter_ui/src/travel_ui/models/destination.dart';
+import 'package:flutter_ui/src/travel_ui/ui/widgets/activity_item.dart';
 
 class DestinationScreen extends StatelessWidget {
   const DestinationScreen({Key key, this.destination}) : super(key: key);

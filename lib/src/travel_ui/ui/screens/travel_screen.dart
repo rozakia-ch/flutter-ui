@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:travel_ui/src/travel_ui/ui/widgets/destination_carousel.dart';
-import 'package:travel_ui/src/travel_ui/ui/widgets/hotel_carousel.dart';
+import 'package:flutter_ui/src/travel_ui/ui/widgets/destination_carousel.dart';
+import 'package:flutter_ui/src/travel_ui/ui/widgets/hotel_carousel.dart';
 
 class TravelScreen extends StatefulWidget {
   const TravelScreen({Key key}) : super(key: key);

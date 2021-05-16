@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:travel_ui/src/travel_ui/models/hotel.dart';
+import 'package:flutter_ui/src/travel_ui/models/hotel.dart';
 
 class HotelItem extends StatelessWidget {
   const HotelItem({Key key, this.hotel}) : super(key: key);

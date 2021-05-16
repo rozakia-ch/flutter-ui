@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui/src/travel_ui/models/activity.dart';
-import 'package:travel_ui/src/travel_ui/ui/widgets/rating_indicator.dart';
+import 'package:flutter_ui/src/travel_ui/models/activity.dart';
+import 'package:flutter_ui/src/travel_ui/ui/widgets/rating_indicator.dart';
 
 class ActivityItem extends StatelessWidget {
   const ActivityItem({Key key, this.activity}) : super(key: key);

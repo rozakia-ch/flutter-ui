@@ -19,3 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 
 Design:
 - [Travel UI](https://dribbble.com/shots/6510521-Travel-App-for-booking-unique-experience)
+- [Moora Money Managing App UI Concept](https://www.uplabs.com/posts/moora-money-managing-app-ui-concept)

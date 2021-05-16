@@ -1,7 +1,7 @@
-import 'package:travel_ui/src/constants/api_constants.dart';
-import 'package:travel_ui/src/travel_ui/models/activity.dart';
-import 'package:travel_ui/src/travel_ui/models/destination.dart';
-import 'package:travel_ui/src/travel_ui/models/hotel.dart';
+import 'package:flutter_ui/src/constants/api_constants.dart';
+import 'package:flutter_ui/src/travel_ui/models/activity.dart';
+import 'package:flutter_ui/src/travel_ui/models/destination.dart';
+import 'package:flutter_ui/src/travel_ui/models/hotel.dart';
 
 class Data {
   static List<Activity> activities = [

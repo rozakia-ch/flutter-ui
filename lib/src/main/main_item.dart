@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui/src/main/main_model.dart';
+import 'package:flutter_ui/src/main/main_model.dart';
 
 class MainItem extends StatelessWidget {
   const MainItem({Key key, this.ui}) : super(key: key);
@@ -31,22 +31,26 @@ class MainItem extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
-                  stops: [0.1, 0.5],
+                  stops: [0.1, 0.9],
                   colors: [Colors.black.withOpacity(0.7), Colors.black.withOpacity(0.0)],
                 ),
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            Positioned(
-              bottom: 10.0,
-              left: 10.0,
-              child: Text(
-                ui.name,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 1.0,
-                  fontSize: 22,
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Container(
+                margin: EdgeInsets.all(10.0),
+                child: Text(
+                  ui.name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.0,
+                    fontSize: 16,
+                  ),
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ),

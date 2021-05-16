@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui/src/travel_ui/constants/data.dart';
-import 'package:travel_ui/src/travel_ui/models/hotel.dart';
-import 'package:travel_ui/src/travel_ui/ui/widgets/hotel_item.dart';
+import 'package:flutter_ui/src/travel_ui/constants/data.dart';
+import 'package:flutter_ui/src/travel_ui/models/hotel.dart';
+import 'package:flutter_ui/src/travel_ui/ui/widgets/hotel_item.dart';
 
 class HotelCarousel extends StatelessWidget {
   const HotelCarousel({Key key}) : super(key: key);

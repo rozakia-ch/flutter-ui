@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:travel_ui/src/travel_ui/models/destination.dart';
-import 'package:travel_ui/src/travel_ui/ui/screens/destination_screen.dart';
+import 'package:flutter_ui/src/travel_ui/models/destination.dart';
+import 'package:flutter_ui/src/travel_ui/ui/screens/destination_screen.dart';
 
 class DestinationItem extends StatelessWidget {
   const DestinationItem({Key key, this.destination}) : super(key: key);
