@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/src/main/main_model.dart';
+import 'package:flutter_ui/src/money_banking/ui/widgets/ImageNetwork.dart';
 
 class MainItem extends StatelessWidget {
   const MainItem({Key key, this.ui}) : super(key: key);
@@ -9,21 +10,17 @@ class MainItem extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ui.route)),
       child: Container(
-        // margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Stack(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20.0),
-                image: DecorationImage(
-                  image: NetworkImage(ui.image),
-                  fit: BoxFit.cover,
-                ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: ImageNetwork(
+                fit: BoxFit.cover,
+                url: ui.image,
               ),
             ),
             Container(
@@ -32,7 +29,7 @@ class MainItem extends StatelessWidget {
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
                   stops: [0.1, 0.9],
-                  colors: [Colors.black.withOpacity(0.7), Colors.black.withOpacity(0.0)],
+                  colors: [Colors.black.withOpacity(0.6), Colors.black.withOpacity(0.0)],
                 ),
                 borderRadius: BorderRadius.circular(20.0),
               ),
