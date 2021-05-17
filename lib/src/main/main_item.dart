@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/src/main/main_model.dart';
-import 'package:flutter_ui/src/money_banking/ui/widgets/ImageNetwork.dart';
+import 'package:flutter_ui/src/main/ImageNetwork.dart';
 
 class MainItem extends StatelessWidget {
   const MainItem({Key key, this.ui}) : super(key: key);

@@ -13,7 +13,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Ui> _listUI = [
       Ui(
-        name: "Travel UI",
+        name: "Travel App for booking unique experience",
         route: TravelScreen(),
         image: "${ApiConstants.BASE_URL_IMAGE}/travel_app.png",
       ),
