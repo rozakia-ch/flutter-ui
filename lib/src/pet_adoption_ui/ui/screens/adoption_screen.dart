@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/src/constants/api_constants.dart';
 import 'package:flutter_ui/src/pet_adoption_ui/constants/color_constants.dart';
 import 'package:flutter_ui/src/pet_adoption_ui/constants/data_constants.dart';
 import 'package:flutter_ui/src/pet_adoption_ui/models/pet_category_model.dart';
 import 'package:flutter_ui/src/pet_adoption_ui/ui/widgets/pet_category_item.dart';
+import 'package:flutter_ui/src/pet_adoption_ui/ui/widgets/pet_item.dart';
 
 class AdoptionScreen extends StatefulWidget {
   const AdoptionScreen({Key key}) : super(key: key);
@@ -24,9 +24,10 @@ class _AdoptionScreenState extends State<AdoptionScreen> {
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(_isDrawerOpen ? 40.0 : 0.0),
       ),
-      child: Column(
+      child: ListView(
+        padding: EdgeInsets.symmetric(vertical: 10.0),
         children: [
-          SizedBox(height: 50.0),
+          SizedBox(height: 30.0),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
@@ -86,7 +87,7 @@ class _AdoptionScreenState extends State<AdoptionScreen> {
             ),
           ),
           Container(
-            height: 120.0,
+            height: 90.0,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: DataConstants.petCategories.length,
@@ -95,49 +96,8 @@ class _AdoptionScreenState extends State<AdoptionScreen> {
                   return PetCategoryItem(petCategory: petCategory);
                 }),
           ),
-          Container(
-            height: 240.0,
-            margin: EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Stack(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.blueGrey[300],
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: DataConstants.shadowList,
-                        ),
-                        margin: EdgeInsets.only(top: 50.0),
-                      ),
-                      Align(
-                        child: Image.network(
-                          "${ApiConstants.BASE_URL_IMAGE}/pet_adoption_ui/pet-cat2.png",
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.only(top: 60.0, bottom: 10.0),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20.0),
-                        bottomRight: Radius.circular(20.0),
-                      ),
-                      boxShadow: DataConstants.shadowList,
-                    ),
-                    child: Column(
-                      children: [],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          )
+          PetItem(),
+          PetItem(),
         ],
       ),
     );

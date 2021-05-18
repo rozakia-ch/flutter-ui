@@ -8,7 +8,7 @@ class PetCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
           padding: EdgeInsets.all(10.0),
