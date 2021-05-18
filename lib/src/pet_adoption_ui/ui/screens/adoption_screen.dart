@@ -97,7 +97,7 @@ class _AdoptionScreenState extends State<AdoptionScreen> {
                 }),
           ),
           PetItem(),
-          PetItem(),
+          // PetItem(),
         ],
       ),
     );

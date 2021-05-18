@@ -42,21 +42,24 @@ class MainScreen extends StatelessWidget {
       child: MediaQuery(
         data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
         child: Scaffold(
-          body: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                ),
-                itemCount: _listUI.length,
-                itemBuilder: (BuildContext context, int index) {
-                  Ui ui = _listUI[index];
-                  return MainItem(ui: ui);
-                },
+          backgroundColor: Colors.grey.shade300,
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            title: Text("Flutter UI"),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
               ),
+              itemCount: _listUI.length,
+              itemBuilder: (BuildContext context, int index) {
+                Ui ui = _listUI[index];
+                return MainItem(ui: ui);
+              },
             ),
           ),
         ),
