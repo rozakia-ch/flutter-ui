@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class ImageNetwork extends StatelessWidget {
   const ImageNetwork({
     Key key,
-    this.height = double.infinity,
-    this.width = double.infinity,
+    this.height,
+    this.width,
     this.url,
     this.fit,
   }) : super(key: key);
@@ -20,16 +20,18 @@ class ImageNetwork extends StatelessWidget {
       width: width,
       fit: fit,
       errorBuilder: (context, error, stackTrace) {
-        print(error); //do something
         return Image.asset("assets/placeholder.png", fit: BoxFit.cover);
       },
       loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent loadingProgress) {
         if (loadingProgress == null) return child;
-        return Center(
-          child: CircularProgressIndicator(
-            value: loadingProgress.expectedTotalBytes != null
-                ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes
-                : null,
+        return Container(
+          height: 100.0,
+          child: Center(
+            child: CircularProgressIndicator(
+              value: loadingProgress.expectedTotalBytes != null
+                  ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes
+                  : null,
+            ),
           ),
         );
       },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_ui/src/constants/api_constants.dart';
 import 'package:flutter_ui/src/main/main_item.dart';
 import 'package:flutter_ui/src/main/main_model.dart';
@@ -25,52 +26,37 @@ class MainScreen extends StatelessWidget {
         image: "${ApiConstants.BASE_URL_IMAGE}/money_banking_app.png",
       ),
       Ui(
-        name: "Pets Adoption App",
+        name: "Pets Adoption App UI",
         route: PetAdoptionScreen(),
         image: "${ApiConstants.BASE_URL_IMAGE}/pet_adoption_app.png",
       ),
       Ui(
-        name: "Plant App",
+        name: "Flutter Plant App UI",
         route: PlantScreen(),
         image: "${ApiConstants.BASE_URL_IMAGE}/plant_app.png",
       ),
     ];
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: const SystemUiOverlayStyle(
-        // For Android.
-        // Use [light] for white status bar and [dark] for black status bar.
-        statusBarIconBrightness: Brightness.dark,
-        // For iOS.
-        // Use [dark] for white status bar and [light] for black status bar.
-        statusBarBrightness: Brightness.dark,
-        statusBarColor: Colors.white,
-      ),
-      child: MediaQuery(
-        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-        child: Scaffold(
-          backgroundColor: Colors.grey.shade300,
-          appBar: AppBar(
-            backgroundColor: Colors.white,
-            title: Text(
-              "Flutter UI",
-              style: TextStyle(color: Colors.black),
-            ),
+    return MediaQuery(
+      data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text(
+            "Flutter UI",
+            style: TextStyle(color: Colors.black),
           ),
-          body: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-              ),
-              itemCount: _listUI.length,
-              itemBuilder: (BuildContext context, int index) {
-                Ui ui = _listUI[index];
-                return MainItem(ui: ui);
-              },
-            ),
-          ),
+        ),
+        body: StaggeredGridView.countBuilder(
+          crossAxisCount: 4,
+          mainAxisSpacing: 10.0,
+          crossAxisSpacing: 10.0,
+          itemCount: _listUI.length,
+          padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
+          itemBuilder: (BuildContext context, int index) {
+            Ui ui = _listUI[index];
+            return MainItem(ui: ui);
+          },
+          staggeredTileBuilder: (index) => const StaggeredTile.fit(2),
         ),
       ),
     );

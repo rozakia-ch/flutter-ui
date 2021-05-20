@@ -11,43 +11,37 @@ class MainItem extends StatelessWidget {
       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ui.route)),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20.0),
-        ),
-        child: Stack(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10.0),
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(2.0, 2.0),
+                blurRadius: 5.0,
+                color: Colors.grey.withOpacity(0.6),
+              )
+            ]),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10.0),
+                topRight: Radius.circular(10.0),
+              ),
               child: ImageNetwork(
                 fit: BoxFit.cover,
                 url: ui.image,
               ),
             ),
             Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                  stops: [0.1, 0.9],
-                  colors: [Colors.black.withOpacity(0.6), Colors.black.withOpacity(0.0)],
-                ),
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Container(
-                margin: EdgeInsets.all(10.0),
-                child: Text(
-                  ui.name,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 1.0,
-                    fontSize: 16,
-                  ),
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
+              margin: EdgeInsets.all(10.0),
+              child: Text(
+                ui.name,
+                style: TextStyle(
+                  color: Colors.grey.shade600,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 1.0,
+                  fontSize: 16,
                 ),
               ),
             ),
