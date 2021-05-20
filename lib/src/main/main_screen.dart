@@ -5,6 +5,7 @@ import 'package:flutter_ui/src/main/main_item.dart';
 import 'package:flutter_ui/src/main/main_model.dart';
 import 'package:flutter_ui/src/money_banking/ui/screens/money_banking_screen.dart';
 import 'package:flutter_ui/src/pet_adoption_ui/ui/screens/pet_adoption_screen.dart';
+import 'package:flutter_ui/src/plant_ui/ui/screens/plant_screen.dart';
 import 'package:flutter_ui/src/travel_ui/ui/screens/travel_screen.dart';
 
 class MainScreen extends StatelessWidget {
@@ -27,7 +28,12 @@ class MainScreen extends StatelessWidget {
         name: "Pets Adoption App",
         route: PetAdoptionScreen(),
         image: "${ApiConstants.BASE_URL_IMAGE}/pet_adoption_app.png",
-      )
+      ),
+      Ui(
+        name: "Plant App",
+        route: PlantScreen(),
+        image: "${ApiConstants.BASE_URL_IMAGE}/plant_app.png",
+      ),
     ];
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
@@ -37,7 +43,7 @@ class MainScreen extends StatelessWidget {
         // For iOS.
         // Use [dark] for white status bar and [light] for black status bar.
         statusBarBrightness: Brightness.dark,
-        // statusBarColor: Colors.white,
+        statusBarColor: Colors.white,
       ),
       child: MediaQuery(
         data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
@@ -45,7 +51,10 @@ class MainScreen extends StatelessWidget {
           backgroundColor: Colors.grey.shade300,
           appBar: AppBar(
             backgroundColor: Colors.white,
-            title: Text("Flutter UI"),
+            title: Text(
+              "Flutter UI",
+              style: TextStyle(color: Colors.black),
+            ),
           ),
           body: Padding(
             padding: const EdgeInsets.all(20.0),
