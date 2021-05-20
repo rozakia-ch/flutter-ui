@@ -29,6 +29,7 @@ class DetailPlantScreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 1.5),
                         child: Column(
                           children: [
+                            SizedBox(height: kDefaultPadding),
                             Align(
                               alignment: Alignment.topLeft,
                               child: IconButton(
